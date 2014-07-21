@@ -1,0 +1,38 @@
+html, body {
+	height:100%;
+	background: url('/Users/gibson/Desktop/g/images/cartographer.png') repeat fixed;
+}
+
+.container {
+	width: 100% !important;
+	height: 100% !important;
+	background: rgb(255, 163, 0);
+	background: rgba(255, 163, 0, .25);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	height: 50px;
+	width: 100%;
+}
+
+h2 {
+	font-size: 200%;
+}
+
+.flex {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foo {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-align:center;
+	color: #FFF;
+}
