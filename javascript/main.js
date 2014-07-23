@@ -1,14 +1,13 @@
 $(function() {
-	getUsersMapCode();
 	getLocation();
 });
 
-function getUsersMapCode() {
+function getUsersMapCode(position) {
 	var result = '';
 	var isocode = '';
 	var tc = iso2ccode(isocode);
-	var y = 40.0149856;
-	var x = -105.2705455;
+	var y = position.coords.latitude;
+	var x = position.coords.longitude;
 
 	for(var run = 1; run <= 2; run++) if ((run == 1) == (tc == ct))
 	{
@@ -35,18 +34,14 @@ function getLocation() {
 	if (navigator.geolocation) {
 		var timeoutVal = 10 * 1000 * 1000;
 		navigator.geolocation.getCurrentPosition(
-			displayPosition,
+			getUsersMapCode,
 			displayError,
 			{ enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
 		);
 	}
 	else {
-		alert("Geolocation is not supported by this browser");
+		$("#results")[0].innerHTML = "Geolocation is not supported by this browser";
 	}
-}
-
-function displayPosition(position) {
-  alert("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
 }
 
 function displayError(error) {
@@ -55,5 +50,5 @@ function displayError(error) {
     2: 'Position unavailable',
     3: 'Request timeout'
   };
-  alert("Error: " + errors[error.code]);
+  $("#results")[0].innerHTML = "Location Error: " + errors[error.code];
 }
