@@ -28,6 +28,7 @@ function getUsersMapCode() {
 		}
 	}
 	$("#results")[0].innerHTML = result;
+	$("#results").slideDown('slow');
 }
 
 function getLocation() {
