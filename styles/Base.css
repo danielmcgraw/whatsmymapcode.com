@@ -1,13 +1,12 @@
 html, body {
 	height:100%;
 	background: url('/images/cartographer.png') repeat fixed;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .container {
 	width: 100% !important;
 	height: 100% !important;
-	background: rgb(255, 163, 0);
-	background: rgba(255, 163, 0, .25);
 }
 
 header {
@@ -15,6 +14,10 @@ header {
 	top: 0;
 	height: 50px;
 	width: 100%;
+}
+
+h1 {
+	font-size: 300%;
 }
 
 h2 {
@@ -32,7 +35,6 @@ h2 {
 }
 
 .foo {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-align:center;
 	color: #FFF;
 }
