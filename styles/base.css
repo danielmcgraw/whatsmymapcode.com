@@ -1,0 +1,34 @@
+html, body {
+	height:100%;
+	background: url('/images/cartographer.png') repeat fixed;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.container {
+	display: block;
+	overflow: auto;
+}
+
+h1 {
+	padding-top: 75px;
+	font-size: 400%;
+}
+
+h2 {
+	font-size: 200%;
+}
+
+.flex {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foo {
+	text-align:center;
+	color: #FFF;
+}
