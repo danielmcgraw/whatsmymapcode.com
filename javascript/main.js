@@ -1,6 +1,16 @@
 $(function() {
 	getLocation();
+	$('.about').on('click', showAbout);
+	$('.close').on('click', hideAbout);
 });
+
+function showAbout() {
+	$('.overlay').fadeIn('slow');
+}
+
+function hideAbout() {
+	$('.overlay').fadeOut('slow');
+}
 
 function getUsersMapCode(position) {
 	var result = '';
