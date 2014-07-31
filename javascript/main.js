@@ -23,8 +23,6 @@ function getUsersMapCode(position) {
 	{
 		for (var ct = 0; ct < MAX_CCODE; ct++) {
 			var results = master_encode(y, x, ct);
-			if (results.length)
-				console.log(ccode2iso(results[0][1], 2));
 			if (run == 1 || results.length) {
 				result += '<p><h2>' + fullname(ct)
 				if(results.length)
